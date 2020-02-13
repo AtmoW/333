@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    $('.burger').click(function(event){
+        $('.burger, .menu').toggleClass('active');
+        $('body').toggleClass('lock')
+    });
+
+
 var s_items = $('.portfolio__item').length;
 for (let i = 0; i < s_items; i++) {
     if(i==0){

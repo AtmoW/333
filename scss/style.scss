@@ -10,6 +10,9 @@ a{
     color: #776E6E;
 }
 
+.burger{
+    display: none;
+}
 
 body{
     color: #776E6E;
@@ -22,9 +25,13 @@ main{
 }
 
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
+}
+
+.menu__phone{
+    display: none;
 }
 
 .block-title{
@@ -52,6 +59,7 @@ main{
 
     &__menu ul{
         display: flex;
+        padding: 0;
         & li{
             list-style: none;
             margin-right: 32px;
@@ -61,11 +69,13 @@ main{
         }
     }
 
-    &__menu-list {}
+    &__menu-list {
+        transition: all 0.3s ease 0s;
+    }
 
     &__phone {}
 
-    &__sotio {
+    &__soсio {
         & a{
             margin-left: 40px;
         }
@@ -76,6 +86,7 @@ main{
 .top {
     top: 0;
     position: relative;
+    min-height: 100vh;
     &__inner {
         display: flex;
         align-items: center;
@@ -348,5 +359,136 @@ main{
             text-decoration: underline;
             margin-right: 53px;
         }
+    }
+}
+
+
+
+@media(max-width:1275px){
+    .header{
+        &__soсio {
+            & a{
+                margin-left: 20px
+            }
+        }
+        &__menu ul{
+            & li{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .burger {
+        right: 0;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 6;
+    &::before,
+    &::after{
+        content: '';
+        background-color: #FF96AA;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    &::before{
+        top: 0;
+    }
+    &::after{
+        bottom: 0;
+    }
+    & span{
+        position: absolute;
+        background-color: #FF96AA;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    &.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    
+    &.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    &.active span{
+        transform: scale(0);
+    }
+    }
+
+    .header{
+        &__menu-list{
+            position: fixed;
+            background-color: #FCEBEE;
+            flex-direction: column;
+            width: 100%;
+            margin:0 -15px 0 -15px;
+            align-items: center;
+            & li{
+                margin: 15px 0 ;
+                text-align: center;
+            }
+            &-sep{
+                background-color: #776E6E;
+                width: 100%;
+                height: 1px;
+                &.last{
+                    display: none;
+                }
+            }
+        }
+    }
+    .menu{
+        top:50px;
+        left:-200%;
+        &.active{
+            left: 15px;
+        }
+    }
+}
+
+@media(max-width:520px){
+    .menu__phone{
+        display: block;
+    }
+    .header{
+        height: 50px;
+        &__inner{
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+        }
+        &__phone{
+            display: none;
+        }
+        &__menu-list{
+            &-sep{
+                &.last{
+                    display: block;
+                }
+            }
+        }
+        &__soсio{
+            & img{
+            height: 40px;
+            width: 40px;
+            }
+        }
+    }
+}
+@media(max-width:420px){
+    .menu{
+        height: 100%;
+        
     }
 }
