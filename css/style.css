@@ -312,6 +312,14 @@ main {
   margin-right: 0;
 }
 
+.calendar__day.non__active {
+  background-color: #CCCCCC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: default;
+}
+
 .calendar__day-week {
   position: absolute;
   top: 3px;
