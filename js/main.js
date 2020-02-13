@@ -24,4 +24,8 @@ for (let i = 0; i < s_items; i++) {
         $('.active').removeClass('active');
         $('.slider__dot[data-slide='+currentSlide+']').toggleClass('active')
     });
+
+    $('.footer__up').click(function (){
+            $('body,html').scrollTop(0);
+    });
 });
