@@ -151,6 +151,14 @@ main{
     border-radius: 50%;
     outline: none;
     cursor: pointer;
+        &.active{
+            background-color: #FBDCE2;
+        }
+
+    margin-right: 28px;
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
     

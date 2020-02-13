@@ -169,6 +169,15 @@ main {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  margin-right: 28px;
+}
+
+.slider__dot.active {
+  background-color: #FBDCE2;
+}
+
+.slider__dot:last-child {
+  margin-right: 0;
 }
 
 .slick-list {
