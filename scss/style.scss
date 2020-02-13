@@ -59,7 +59,6 @@ body{
 
 .top {
     top: 0;
-    height: 100vh;
     background-image: url('../img/bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -92,6 +91,7 @@ body{
 
     &__img {
         margin-top: 130px;
+        margin-bottom: 112px;
         & img{
             display: block;
         }
