@@ -199,6 +199,17 @@ main{
         font-size: 31px;
         & li{
             margin-bottom: 25px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 37px;
+                background-image: url(../img/list-mark.png);
+                left: -33px;
+                top: 50%;
+                transform: translateY(-60%);
+            }
         }
     }
 }

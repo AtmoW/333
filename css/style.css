@@ -215,5 +215,18 @@ main {
 
 .about__list li {
   margin-bottom: 25px;
+  position: relative;
+}
+
+.about__list li::before {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 37px;
+  background-image: url(../img/list-mark.png);
+  left: -33px;
+  top: 50%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 /*# sourceMappingURL=style.css.map */
