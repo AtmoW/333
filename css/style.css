@@ -18,12 +18,26 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  background: url("../img/bgbg.jpg") repeat-y center;
+  background-size: cover;
+}
+
 .container {
   width: 1184px;
   margin: 0 auto;
 }
 
+.block-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+}
+
 .header {
+  z-index: 4;
   position: fixed;
   top: 0;
   width: 100%;
@@ -66,10 +80,7 @@ body {
 
 .top {
   top: 0;
-  background-image: url("../img/bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 .top__inner {
@@ -108,5 +119,92 @@ body {
 
 .top__img img {
   display: block;
+}
+
+.portfolio__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__slider {
+  width: 585px;
+  z-index: 1;
+  border: 10px solid #FF96AA;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.portfolio__item {
+  border-radius: 26px;
+}
+
+.portfolio__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__border {
+  margin-bottom: 59px;
+}
+
+.slider__dotted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 150px;
+}
+
+.slider__dot {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #FF96AA;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-list {
+  margin: 0 -50px;
+}
+
+.slick-slide {
+  margin: 0 50px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__map {
+  width: 726px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.about__list {
+  list-style: none;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 31px;
+}
+
+.about__list li {
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=style.css.map */
