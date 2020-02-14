@@ -45,4 +45,6 @@ for (let i = 0; i < s_items; i++) {
             $(window).unbind('scroll');
         }
     });
+
+
 });
