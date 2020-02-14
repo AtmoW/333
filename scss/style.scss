@@ -362,7 +362,31 @@ main{
     }
 }
 
-
+.time{
+    min-height: 100vh;
+    &__inner{
+        margin-top: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__btn{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #FFF4F6;
+        border: 3px solid #FF9AAD;
+        border-radius: 22px;
+        width: 101px;
+        height: 38px;
+        text-align: center;
+        padding-top: 3px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+}
 
 @media(max-width:1275px){
     .header{
