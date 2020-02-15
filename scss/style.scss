@@ -435,12 +435,6 @@ main{
         padding-top: 10vh;
         margin-bottom: 30px;
     }
-    
-    & label{
-        font-style: italic;
-        font-weight: 500;
-        font-size: 24px;
-    }
 
     &__text{
         border: 3px solid #FF9AAD;
@@ -453,6 +447,9 @@ main{
             margin-left: 25px;
             margin-bottom: 5px;
             margin-top: 29px;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 24px;
         }
         &-box{
             display: flex;
@@ -496,6 +493,10 @@ main{
 
     &__label {
         position: relative;
+        margin-top: 29px;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 24px;
         cursor: pointer;
         &::before{
             content: '';
@@ -553,6 +554,35 @@ main{
         color: #776E6E;
         cursor: pointer;
         outline: none;
+    }
+    &__props {
+        margin-top: 20px;
+    }
+}
+.props {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 310px;
+
+    &__prop{
+        margin-bottom: 5px;
+        & label{
+            margin-right: 6px;
+        }
+    }
+
+    &__title {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 22px;
+        margin-bottom: 7px;
+    }
+
+    &__label{
+        font-style: italic;
+        font-weight: 500;
+        font-size: 17px;
     }
 }
 

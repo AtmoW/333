@@ -69,4 +69,44 @@ for (let i = 0; i < s_items; i++) {
         arrows:false,
         draggable:false,
     });
+    $(".services__service .services__input[data-serv]").on('click',function () {
+            serv = $(this).attr('data-serv');
+
+            prop_count = $('.props__prop').length;
+            if(parseInt(prop_count) == 0){
+                $('.props').append('<div class="props__title">Выберите количество ногтей:</div>');
+            }
+            
+            if($('.props__prop[data-serv="'+serv+'"]').length > 0){
+                $('.props__prop[data-serv="'+serv+'"]').remove();
+            }
+            else
+            {
+                $('.props').append('<div  data-serv = "'+serv+'" class = "props__prop prop">'+
+                '<label for="nails" class="props__label">Для услуги '+serv+'</label>'+
+                '<select name = "prop-2" id = "nails">' +
+                    '<option value="1">1</option>'+
+                    '<option value="2">2</option>'+
+                    '<option value="3">3</option>'+
+                    '<option value="4">4</option>'+
+                    '<option value="5">5</option>'+
+                    '<option value="6">6</option>'+
+                    '<option value="7">7</option>'+
+                    '<option value="8">8</option>'+
+                    '<option value="9">9</option>'+
+                    '<option value="10">10</option>'+
+                '</select>'+
+                '</div>'
+                );
+            }
+
+            prop_count = $('.props__prop').length;
+            if(parseInt(prop_count) == 0){
+                $('.props__title').remove();
+            }
+            
+        
+	});
 });
+
+
