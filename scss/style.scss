@@ -365,23 +365,16 @@ main{
 }
 
 .time{
-    &__main{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100vh;
-
-    }
     min-height: 100vh;
-
     &__title{
-        margin-top: 20vh;
+        padding-top: 20vh;
     }
     &__inner{
-        margin-top: 10vh;
         display: flex;
         flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 10vh;
     }
     &__btn{
         font-style: normal;
@@ -405,19 +398,14 @@ main{
 
 
 .form{
-    &__main{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100vh;
-    }
-
+    margin-top: 10vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__title{
+        padding-top: 10vh;
         margin-bottom: 30px;
     }
     
@@ -465,17 +453,19 @@ main{
     }
 
     &__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         border: 3px solid #FF9AAD;
         border-radius: 24px;
-        padding: 12px 46px;
+        padding: 20px 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+        justify-content: space-between;
     }
 
     &__service{
         padding-left: 35px;
-        margin-bottom: 13px;
+        margin-bottom: 20px;
     }
 
     &__label {
@@ -749,6 +739,27 @@ main{
             width: 400px;
         }
     }
+
+    .services{
+        &__title{
+            margin: 0;
+            text-align: center;
+        }
+        &__prices{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 7px;
+            &-all{
+                flex-direction: column;
+                width: 350px;
+                margin: 0 auto;
+            }
+        }
+        &__box{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 @media(max-width:600px){
@@ -791,11 +802,18 @@ main{
             display: none;
         }
     }
+
+    .services{
+        &__box{
+            justify-content: center;
+        }
+    }
 }
 
 @media(max-width:545px){
     .calendar{
         width: 300px;
+        height: 300px;
     }
 }
 
@@ -923,12 +941,27 @@ main{
     .menu{
         height: 100%;
     }
+    .form{
+        &__text{
+            width: 300px;
+        }
+    }
 }
 
 @media(max-width:399px){
     .portfolio{
         &__title{
             margin-top: 0;
+        }
+    }
+
+    .services{
+        &__prices-all{
+            width: 100%;
+            text-align: center;
+        }
+        &__btn{
+            padding: 13px 13px;
         }
     }
 }

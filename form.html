@@ -14,6 +14,34 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="header__menu">
+                    <div class="header__burger burger">
+                        <span></span>
+                    </div>
+                    <ul class="header__menu-list menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <div class="header__menu-list-sep"></div>
+                        <li><a href="#">Как записаться</a></li>
+                        <div class="header__menu-list-sep"></div>
+                        <li><a href="#">Мои работы</a></li>
+                        <div class="header__menu-list-sep"></div>
+                        <li><a href="#">Запись</a></li>
+                        <div class="header__menu-list-sep last"></div>
+                        <li><div class="menu__phone"><a href="tel:+79219859566">+7(921)985-95-66</a></div></li>
+                    </ul>
+                </nav>
+                <div class="header__phone"><a href="tel:+79219859566">+7(921)985-95-66</a></div>
+                <div class="header__soсio">
+                    <a href=""><img src="img/header-social-1.svg" alt=""></a>
+                    <a href=""><img src="img/header-social-2.svg" alt=""></a>
+                    <a href=""><img src="img/header-social-3.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class=form__main>
         <div class="form__title block-title">
             Ваши данные
@@ -25,7 +53,7 @@
             </div>
             <div class=form__text-box>
                 <label class="form__text-label" for="phone">Ваш номер телефона</label>
-                <input class="form__text" type="text" name = "phone" id="phone" placeholder="Введите ваш номер">
+                <input class="form__text phone" type="text" name = "phone" id="phone" placeholder="Введите ваш номер">
             </div>
 
             <div class="services__result">
@@ -89,6 +117,12 @@
             </div>
         </form>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src = "js/jquery.mask.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
