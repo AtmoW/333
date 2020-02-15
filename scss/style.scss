@@ -136,6 +136,7 @@ main{
         border: 10px solid #FF96AA;
         border-radius: 26px;
         overflow: hidden;
+        background-color: #FBDCE2;
     }
 
     &__item{
@@ -249,8 +250,9 @@ main{
 .calendar {
     padding: 5px 5px 10px;
     border: 4px solid #FF96AA;
-    width: 1184px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     &__arrow{
         &-right,&-left{
             cursor: pointer;
@@ -291,12 +293,9 @@ main{
     &__day {
         width: 159px;
         height: 115px;
-        margin-right: 9px;
+        margin-right: 5px;
         cursor: pointer;
         position: relative;
-        &:last-child{
-            margin-right: 0;
-        }
         background: #FFEAEE;
         border: 5px solid #FBDCE2;
         box-sizing: border-box;
@@ -542,6 +541,14 @@ main{
 }
 
 
+@media(max-width:1401px){
+    .about{
+        &__map{
+            width: 640px;
+        }
+    }
+}
+
 @media(max-width:1275px){
     .header{
         &__soсio {
@@ -553,6 +560,38 @@ main{
             & li{
                 margin-right: 20px;
             }
+        }
+    }
+
+    .calendar{
+        width: 920px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:1045px){
+    .top{
+        &__inner{
+            flex-direction: column-reverse;
+        }
+        &__img{
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+        &__title{
+            margin-top: 30px;
+        }
+    }
+
+    .portfolio{
+        &__title{
+            margin-top: 120px;
+        }
+    }
+
+    .about{
+        &__content{
+            flex-direction: column;
         }
     }
 }
@@ -635,6 +674,131 @@ main{
     }
 }
 
+@media(max-width:960px){
+    .footer{
+        &__socio{
+            margin-left: 20px;
+            & a{
+                margin-right: 30px;
+            }
+        }
+        &__author{
+            & a{
+                margin-right: 0;
+            }
+        }
+    }
+
+    .calendar{
+        display: flex;
+        width: 850px;
+        &__week{
+            flex-direction: column;
+        }
+    }
+
+    .portfolio{
+        &__slider{
+            width: 450px;
+            height: 450px;
+        }
+    }
+}
+
+@media(max-width:880px){
+    .calendar{
+        width: 704px;
+        &__day{
+            width: 130px;
+        }
+    }
+}
+
+@media(max-width:750px){
+    .calendar{
+        height: 500px;
+        overflow-y: scroll;
+        width: 500px;
+        &__day{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:720px){
+    .footer{
+        height: 80px;
+        &__up{
+            margin-left: 5px;
+        }
+        &__socio{
+            & a{
+                margin-right: 10px;
+                & img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:660px){
+    .about{
+        &__map{
+            width: 400px;
+        }
+    }
+}
+
+@media(max-width:600px){
+    .top{
+        &__title{
+            font-size: 62px;
+            margin-bottom: 20px;
+        }
+        &__desc{
+            font-size: 21px;
+            max-width: 434px;
+        }
+    }
+
+    .portfolio{
+        &__title{
+            margin-top: 75px;
+        }
+    }
+    .block-title{
+        font-size: 45px;
+    }
+
+    .calendar{
+        &__title{
+            &-text{
+                font-size: 35px;
+            }
+        }
+    }
+
+    .about{
+        &__list{
+            font-size: 23px;
+        }
+    }
+
+    .footer{
+        &__up{
+            display: none;
+        }
+    }
+}
+
+@media(max-width:545px){
+    .calendar{
+        width: 300px;
+    }
+}
+
 @media(max-width:520px){
     .menu__phone{
         display: block;
@@ -663,10 +827,114 @@ main{
             }
         }
     }
+
+    .about{
+        &__adress{
+            font-size: 18px;
+        }
+    }
+
+    .top{
+        &__img{
+            width:400px;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+
+    .footer{
+        height: 100px;
+        &__inner{
+            flex-direction: column;
+        }
+        &__socio{
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    .portfolio{
+        &__slider{
+            width: 350px;
+            height: 350px;
+        }
+        &__border{
+            margin-bottom: 30px;
+        }
+    }
+
+    
 }
+
+@media(max-width:485px){
+    .top{
+        &__title{
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+        &__desc{
+            font-size: 19px;
+             max-width: 365px;
+        }
+    }
+    .portfolio{
+        &__slider{
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    .block-title{
+        font-size: 40px;
+    }
+
+    .about{
+        &__map{
+            width: 300px;
+        }
+    }
+    .calendar{
+        &__title{
+            &-text{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
 @media(max-width:420px){
+    .top{
+        &__img{
+            width: 300px;
+            margin-bottom: 0;
+        }
+        &__title{
+            text-align: center;
+        }
+    }
+
+    .portfolio{
+        &__title{
+            margin-top: -40px;
+        }
+    }
+
     .menu{
         height: 100%;
-        
+    }
+}
+
+@media(max-width:399px){
+    .portfolio{
+        &__title{
+            margin-top: 0;
+        }
+    }
+}
+
+@media(max-width:370px){
+    .block-title{
+        font-size: 35px;
     }
 }
