@@ -73,9 +73,6 @@ main{
     &__menu-list {
         transition: all 0.3s ease 0s;
     }
-
-    &__phone {}
-
     &__soсio {
         & a{
             margin-left: 40px;
@@ -92,9 +89,6 @@ main{
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    &__text {
     }
 
     &__title {
@@ -189,13 +183,6 @@ main{
 
 
 .about {
-
-    &__inner {}
-
-    &__title {
-
-    }
-
     &__content {
         display: flex;
         justify-content: space-between;
@@ -241,12 +228,6 @@ main{
 
 .booking {
 
-    &__title {}
-
-    &__calendar {
-
-    }
-
     padding-bottom: 143px;
 }
 
@@ -256,7 +237,6 @@ main{
 
 .calendar {
     
-
     & .slick-slide{
         display: flex;
     }
@@ -763,7 +743,12 @@ main{
 @media(max-width:750px){
     .calendar{
         height: 500px;
-        overflow-y: scroll;
+        &__month{
+            overflow-y: scroll;
+            &.slick-slide{
+                height: 500px;
+            }
+        }
         width: 500px;
         &__day{
             width: 100%;
@@ -864,12 +849,23 @@ main{
             justify-content: center;
         }
     }
+
+    .month__slider-title{
+        &.slick-slider{
+            max-width: 150px;
+        }
+    }
 }
 
 @media(max-width:545px){
     .calendar{
         width: 300px;
         height: 300px;
+        &__month{
+            &.slick-slide{
+                height: 300px;
+            }
+        }
     }
 }
 
@@ -1025,5 +1021,17 @@ main{
 @media(max-width:370px){
     .block-title{
         font-size: 35px;
+    }
+    .month__slider-title{
+        &.slick-slider{
+            max-width: 130px;
+        }
+    }
+    .calendar__arrow{
+        &-right, &-left{
+            & img{
+                width: 50px;
+            }
+        }
     }
 }
