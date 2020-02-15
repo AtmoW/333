@@ -47,4 +47,26 @@ for (let i = 0; i < s_items; i++) {
     });
 
     $('.phone').mask('+7(000)-000-00-00');
+
+    $('.calendar').slick({
+        infinite: false,
+        autoplay: false,
+        arrows:false,
+        draggable:false
+    });
+    $('.next').on('click', function() {
+        $('.month__slider-title').slick('slickNext');
+        $('.calendar').slick('slickNext');
+      });
+    $('.prev').on('click', function() {
+      $('.calendar').slick('slickPrev');
+      $('.month__slider-title').slick('slickPrev');
+    });
+
+    $('.month__slider-title').slick({
+        infinite: false,
+        autoplay: false,
+        arrows:false,
+        draggable:false,
+    });
 });

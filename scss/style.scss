@@ -124,6 +124,13 @@ main{
 }
 
 .portfolio {
+    & .slick-list{
+        margin: 0 -50px;
+    }
+    & .slick-slide{
+        margin: 0 50px;
+        outline: none;
+    }
     &__content {
         display: flex;
         flex-direction: column;
@@ -177,12 +184,7 @@ main{
 }
     
 
-.slick-list{
-    margin: 0 -50px;
-}
-.slick-slide{
-    margin: 0 50px;
-}
+
 
 
 
@@ -247,15 +249,35 @@ main{
 
     padding-bottom: 143px;
 }
+
+.month__slider-title{
+    width: 300px;
+}
+
 .calendar {
-    padding: 5px 5px 10px;
+    
+
+    & .slick-slide{
+        display: flex;
+    }
+    & .slick-initialized{
+        display: flex;
+    }
     border: 4px solid #FF96AA;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    &__month{
+        padding: 5px 5px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        outline: none;
+    }
     &__arrow{
         &-right,&-left{
             cursor: pointer;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none
+            outline: none;
         }
         &-left{
             margin-right: 20px;
@@ -265,6 +287,9 @@ main{
         }
     }
     &__title{
+        &.slick-slider{
+        max-width: 100px;
+        }
         text-align: center;
         margin-top: 50px;
         margin-bottom: 25px;
@@ -300,6 +325,8 @@ main{
         border: 5px solid #FBDCE2;
         box-sizing: border-box;
         box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+        outline: none;
+    }
 
         &.non__active{
             background-color: #CCCCCC;
@@ -443,7 +470,6 @@ main{
 .services {
     margin-top: 39px;
     max-width: 703px;
-
 
     &__title {
         margin-left: 171px;
