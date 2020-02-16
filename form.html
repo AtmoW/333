@@ -30,7 +30,9 @@
                         <div class="header__menu-list-sep"></div>
                         <li><a href="#">Запись</a></li>
                         <div class="header__menu-list-sep last"></div>
-                        <li><div class="menu__phone"><a href="tel:+79219859566">+7(921)985-95-66</a></div></li>
+                        <li>
+                            <div class="menu__phone"><a href="tel:+79219859566">+7(921)985-95-66</a></div>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__phone"><a href="tel:+79219859566">+7(921)985-95-66</a></div>
@@ -49,60 +51,65 @@
         <form action="" class="form">
             <div class=form__text-box>
                 <label class="form__text-label" for="name">Как вас зовут</label>
-                <input class="form__text" name = "name" type="text" id="name" placeholder="Введите ваше имя">
+                <input class="form__text" name="name" type="text" id="name" placeholder="Введите ваше имя">
             </div>
             <div class=form__text-box>
                 <label class="form__text-label" for="phone">Ваш номер телефона</label>
-                <input class="form__text phone" type="text" name = "phone" id="phone" placeholder="Введите ваш номер">
+                <input class="form__text phone" type="text" name="phone" id="phone" placeholder="Введите ваш номер">
             </div>
 
             <div class="services__result">
                 <div class="form__services services">
                     <div class="services__title">Услуги</div>
                     <div class="services__box">
-                        <div class="services__service">
-                            <input id='ser-1' type="checkbox" class="services__input">
-                            <label for="ser-1" class="services__label">Наращивание</label>
+                        <div class="services__col">
+                            <div class="services__service">
+                                <input id='ser-1' type="checkbox" class="services__input">
+                                <label for="ser-1" class="services__label">Наращивание</label>
+                            </div>
+
+                            <div class="services__service">
+                                <input id='ser-2' data-serv="ремонт" type="checkbox" class="services__input">
+                                <label for="ser-2" class="services__label">Ремонт</label>
+                            </div>
+
+                            <div class="services__service">
+                                <input id='ser-3' data-serv="дизайн" type="checkbox" class="services__input">
+                                <label for="ser-3" class="services__label">Дизайн</label>
+                            </div>
                         </div>
 
-                        <div class="services__service">
-                            <input id='ser-2' data-serv="ремонт" type="checkbox" class="services__input">
-                            <label for="ser-2"  class="services__label">Ремонт</label>
+                        <div class="services__col">
+                            <div class="services__service">
+                                <input id='ser-4' type="checkbox" class="services__input">
+                                <label for="ser-4" class="services__label">Наращивание</label>
+                            </div>
+
+                            <div class="services__service">
+                                <input id='ser-5' type="checkbox" class="services__input">
+                                <label for="ser-5" class="services__label">Наращивание</label>
+                            </div>
+                            <div class="services__service">
+
+                                <input id='ser-6' type="checkbox" class="services__input">
+                                <label for="ser-6" class="services__label">Наращивание</label>
+                            </div>
                         </div>
 
-                        <div class="services__service">
-                            <input id='ser-3' data-serv="дизайн" type="checkbox" class="services__input">
-                            <label for="ser-3"  class="services__label">Дизайн</label>
-                        </div>
+                        <div class=services__col>
+                            <div class="services__service">
+                                <input id='ser-7' type="checkbox" class="services__input">
+                                <label for="ser-7" class="services__label">Наращивание</label>
+                            </div>
 
-                        <div class="services__service">
-                            <input id='ser-4' type="checkbox" class="services__input">
-                            <label for="ser-4" class="services__label">Наращивание</label>
-                        </div>
-
-                        <div class="services__service">
-                            <input id='ser-5' type="checkbox" class="services__input">
-                            <label for="ser-5" class="services__label">Наращивание</label>
-                        </div>
-                        <div class="services__service">
-
-                            <input id='ser-6' type="checkbox" class="services__input">
-                            <label for="ser-6" class="services__label">Наращивание</label>
-                        </div>
-
-                        <div class="services__service">
-                            <input id='ser-7' type="checkbox" class="services__input">
-                            <label for="ser-7" class="services__label">Наращивание</label>
-                        </div>
-
-                        <div class="services__service">
-                            <input id='ser-8' type="checkbox" class="services__input">
-                            <label for="ser-8" class="services__label">Наращивание</label>
+                            <div class="services__service">
+                                <input id='ser-8' type="checkbox" class="services__input">
+                                <label for="ser-8" class="services__label">Наращивание</label>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="services__props props">
-                    
                 </div>
                 <div class="services__prices-all">
                     <div class="services__prices">
@@ -114,7 +121,7 @@
                         </div>
                     </div>
 
-                    <input type="submit" class="services__btn" value = "сделать предоплату">
+                    <input type="submit" class="services__btn" value="сделать предоплату">
                 </div>
             </div>
         </form>
@@ -123,7 +130,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="js/slick.min.js"></script>
-    <script src = "js/jquery.mask.js"></script>
+    <script src="js/jquery.mask.js"></script>
     <script src="js/main.js"></script>
 </body>
 
