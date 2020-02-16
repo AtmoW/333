@@ -505,6 +505,7 @@ main{
     }
 
     &__prices{
+        padding-right: 15px;
         &-all{
             margin-top: 26px;
             font-style: italic;
@@ -785,6 +786,7 @@ main{
             flex-direction: column;
             align-items: center;
             padding-bottom: 7px;
+            padding-right: 0;
             &-all{
                 flex-direction: column;
                 width: 350px;
