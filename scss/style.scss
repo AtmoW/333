@@ -448,7 +448,6 @@ main{
 
 .services {
     margin-top: 39px;
-    max-width: 703px;
 
     &__title {
         margin-left: 171px;
@@ -506,7 +505,7 @@ main{
     &__result{
         display: flex;
         flex-direction: column;
-        max-width: 703px;
+        max-width: 1150px;
     }
 
     &__prices{
