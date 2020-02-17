@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rabbit paw nails</title>
+    <link rel="shortcut icon" href="img/list-mark.png" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300i,400,400i,500,500i,700i,900i&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
 </head>
 
 <body>
@@ -64,52 +65,47 @@
                     <div class="services__box">
                         <div class="services__col">
                             <div class="services__service">
-                                <input id='ser-1' type="checkbox" class="services__input">
+                                <input data-price="100" id='ser-1' type="checkbox" class="services__input">
                                 <label for="ser-1" class="services__label">Снятие покрытия</label>
                             </div>
 
                             <div class="services__service">
-                                <input id='ser-2' data-serv="ремонт" type="checkbox" class="services__input">
-                                <label for="ser-2" class="services__label">Ремон  </label>
+                                <input data-price="100" id='ser-2' data-serv="ремонт" type="checkbox" class="services__input">
+                                <label for="ser-2" class="services__label">Ремонт</label>
                             </div>
 
                             <div class="services__service">
-                                <input id='ser-3' data-serv="дизайн" type="checkbox" class="services__input">
+                                <input data-price="100" id='ser-3' data-serv="дизайн" type="checkbox" class="services__input">
                                 <label for="ser-3" class="services__label">Дизайн</label>
                             </div>
                         </div>
 
                         <div class="services__col">
                             <div class="services__service">
-                                <input id='ser-4' type="checkbox" class="services__input">
+                                <input data-price="300" id='ser-4' type="checkbox" class="services__input">
                                 <label for="ser-4" class="services__label">Покрытие</label>
                             </div>
-
-                            <div class="services__service">
-                                <input id='ser-5' type="checkbox" class="services__input">
-                                <label for="ser-5" class="services__label">Укрепление</label>
-                            </div>
                             <div class="services__service">
 
-                                <input id='ser-6' type="checkbox" class="services__input">
-                                <label for="ser-6" class="services__label">Укрепление пудрой</label>
+                                <input data-price="50" data-all-price = "300" data-serv="укрепление акриловой пудрой" id='ser-6' type="checkbox" class="services__input">
+                                <label for="ser-6" class="services__label">Укрепление акриловой пудрой</label>
                             </div>
+                            <div class="services__service">
+                                <input data-price="100" data-all-price = "350" data-serv="укрепление гелем" id='ser-7' type="checkbox" class="services__input">
+                                <label for="ser-7" class="services__label">Укрепление гелем</label>
+                            </div>
+
                         </div>
 
                         <div class=services__col>
                             <div class="services__service">
-                                <input id='ser-7' type="checkbox" class="services__input">
-                                <label for="ser-7" class="services__label">Укрепление гелем</label>
-                            </div>
-
-                            <div class="services__service">
-                                <input id='ser-8' type="checkbox" class="services__input">
+                                <input data-price="150" data-all-price = "1300" data-serv="наращивание" id='ser-8' type="checkbox" class="services__input">
                                 <label for="ser-8" class="services__label">Наращивание</label>
                             </div>
 
                             <div class="services__service">
-                                <input id='ser-8' type="checkbox" class="services__input">
-                                <label for="ser-8" class="services__label">Маникюр</label>
+                                <input data-price="500" id='ser-9' type="checkbox" class="services__input">
+                                <label for="ser-9" class="services__label">Маникюр</label>
                             </div>
                         </div>
                     </div>
@@ -119,10 +115,10 @@
                 <div class="services__prices-all">
                     <div class="services__prices">
                         <div class="services__price">
-                            Стоимость за услуги: 1000руб.
+                            Стоимость за услуги: <span>0</span> руб.
                         </div>
                         <div class="services__sale">
-                            Предоплата: 250руб.
+                            Предоплата: <span>0</span> руб.
                         </div>
                     </div>
 
@@ -131,9 +127,28 @@
             </div>
         </form>
     </main>
+    
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <footer class="footer">
+        <div class="footer__up">
+            <img src="img/footer-up.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__socio">
+                    <a href=""><img src="img/footer-social-1.svg" alt=""></a>
+                    <a href=""><img src="img/footer-social-2.svg" alt=""></a>
+                    <a href=""><img src="img/footer-social-3.svg" alt=""></a>
+                </div>
+                <div class="footer__author">
+                    сайт разработал - <a href="#">Илья Евдокимов</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.mask.js"></script>
     <script src="js/main.js"></script>

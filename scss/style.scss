@@ -535,6 +535,7 @@ main{
         color: #776E6E;
         cursor: pointer;
         outline: none;
+        margin-bottom: 30px;
     }
     &__props {
         margin-top: 20px;
@@ -720,6 +721,10 @@ main{
         &__week{
             flex-direction: column;
         }
+    }
+
+    .another-month{
+        display: none;
     }
 
     .portfolio{
@@ -935,6 +940,19 @@ main{
     }
 
     
+}
+
+@media(max-width:510px){
+    .services{
+        &__box{
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0 auto;
+        }
+        &__col{
+            text-align: left;
+        }
+    }
 }
 
 @media(max-width:485px){

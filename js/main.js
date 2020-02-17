@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    let total_price = 0;
+        sale = 0;
     $('.burger').click(function(event){
         $('.burger, .menu').toggleClass('active');
         $('body').toggleClass('lock')
@@ -48,11 +50,15 @@ for (let i = 0; i < s_items; i++) {
 
     $('.phone').mask('+7(000)-000-00-00');
 
+
+    
     $('.calendar').slick({
         infinite: false,
         autoplay: false,
         arrows:false,
-        draggable:false
+        draggable:false,
+        slidesToShow: 1,
+        adaptiveHeight: true,
     });
     $('.next').on('click', function() {
         $('.month__slider-title').slick('slickNext');
@@ -71,6 +77,8 @@ for (let i = 0; i < s_items; i++) {
     });
     $(".services__service .services__input[data-serv]").on('click',function () {
             serv = $(this).attr('data-serv');
+            price = $(this).attr('data-price');
+            all_price = $(this).attr('data-all-price');
 
             prop_count = $('.props__prop').length;
             if(parseInt(prop_count) == 0){
@@ -82,9 +90,10 @@ for (let i = 0; i < s_items; i++) {
             }
             else
             {
-                $('.props').append('<div  data-serv = "'+serv+'" class = "props__prop prop">'+
+                $('.props').append('<div data-serv="'+serv+'" data-price = "'+price+'"  data-all-price = "'+all_price+'" class = "props__prop prop">'+
                 '<label for="nails" class="props__label">Для услуги '+serv+'</label>'+
-                '<select name = "prop-2" id = "nails">' +
+                '<select  data-serv="'+serv+'" name = "prop-'+serv+'" id = "nails" class = "nails">' +
+                    '<option value="0">0</option>'+
                     '<option value="1">1</option>'+
                     '<option value="2">2</option>'+
                     '<option value="3">3</option>'+
@@ -104,9 +113,53 @@ for (let i = 0; i < s_items; i++) {
             if(parseInt(prop_count) == 0){
                 $('.props__title').remove();
             }
-            
+    });
+
+    $('.services__service .services__input').on('change', function(){
+
+        if(!$(this).attr('data-serv')){
+            if($(this).prop('checked')){
+                total_price+=parseInt($(this).attr('data-price'));
+            }
+            else{
+                total_price-=parseInt($(this).attr('data-price'));
+            }
+        }
         
-	});
+
+        sum = 0;
+        selected = [];
+        $('select').each(function(index){
+            selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+        });
+        selected.forEach(function(item){
+            sum+=item;
+        });
+
+        $('.services__price span').html(parseInt(total_price) + parseInt(sum));
+        sale = Math.round((parseInt(total_price) + parseInt(sum)) * 0.25);
+        $('.services__sale span').html(sale);
+        console.log(selected);
+
+    });
+
+    $('.props').on('change','.props, .prop', function()
+    {
+        sum = 0;
+        selected = [];
+
+        $('select').each(function(index){
+            selected[index] = $(this,'option:selected').val() * $(this).parent().attr('data-price');
+        });
+
+        selected.forEach(function(item){
+            sum+=item;
+        });
+        
+        $('.services__price span').html(parseInt(total_price) + parseInt(sum));
+        sale = Math.round((parseInt(total_price) + parseInt(sum)) * 0.25);
+        $('.services__sale span').html(sale);
+    });
 });
 
 
