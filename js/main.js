@@ -130,7 +130,17 @@ for (let i = 0; i < s_items; i++) {
         sum = 0;
         selected = [];
         $('select').each(function(index){
-            selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+            if($(this).parent().attr('data-all-price')!=''){
+                if(parseInt($(this,'option:selected').val())==10){
+                    selected[index] = parseInt($(this).parent().attr('data-all-price'));
+                }
+                else{
+                    selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+                }
+            }
+            else{
+                selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+            }
         });
         selected.forEach(function(item){
             sum+=item;
@@ -149,7 +159,17 @@ for (let i = 0; i < s_items; i++) {
         selected = [];
 
         $('select').each(function(index){
-            selected[index] = $(this,'option:selected').val() * $(this).parent().attr('data-price');
+            if($(this).parent().attr('data-all-price')!=''){
+                if(parseInt($(this,'option:selected').val())==10){
+                    selected[index] = parseInt($(this).parent().attr('data-all-price'));
+                }
+                else{
+                    selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+                }
+            }
+            else{
+                selected[index] =parseInt($(this,'option:selected').val()) * parseInt($(this).parent().attr('data-price'));
+            }
         });
 
         selected.forEach(function(item){
