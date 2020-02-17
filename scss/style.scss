@@ -449,6 +449,10 @@ main{
 .services {
     margin-top: 39px;
 
+
+    &__col{
+        margin-right: 20px;
+    }
     &__title {
         margin-left: 171px;
         font-style: italic;
@@ -851,7 +855,6 @@ main{
 
     .services{
         &__box{
-            justify-content: space-around;
         }
     }
 
@@ -950,6 +953,7 @@ main{
             margin: 0 auto;
         }
         &__col{
+            margin-right: 0;
             text-align: left;
         }
     }
